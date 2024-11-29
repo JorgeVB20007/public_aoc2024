@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!--
+	¿¿Qué haces inspeccionando elemento?? ¡Déjame en paz y ponte a programar!
+
+	(A no ser que hayas encontrado un bug, en ese caso contáctame por Slack porfa <3)
+	- jvacaris
+-->
+
+<html>
+
+<head>
+    <title>AoC 42 - Deleted</title>
+    <link rel="icon" type="image/x-icon" href="/faviconaoc.ico">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <!-- ?  HEADER -->
+	<div class="custom-header">
+        <div class="custom-logo-div" style="height: 200px; overflow-y: unset;">
+            <iframe class="custom-logo-long" src="/42.html" allowTransparency="true" scrolling="no" frameborder="0" style="width:50vw; height: 200px; overflow-y: unset;"></iframe>
+            <iframe class="custom-logo-short" src="/42short.html" allowTransparency="true" scrolling="no" frameborder="0" style="width:66vw; height: 220px; overflow-y: unset;"></iframe>
+        </div>
+        <div style="display: flex; flex-direction: row; align-items: center; width:50vw; margin: auto; text-align: center; justify-content: center;">
+            <a href=<%= langkit["header"]["register_href"] %> style="width:max-content"> [<%= langkit["header"]["register"] %>] </a>
+            <span style="margin: 1%;"> · </span>
+            <a href=<%= langkit["header"]["faqs_href"] %> style="width:max-content"> [<%= langkit["header"]["faqs"] %>] </a>
+            <span style="margin: 1%;"> · </span>
+            <a href=<%= langkit["header"]["ranking_href"] %> style="width:max-content"> [<%= langkit["header"]["ranking"] %>] </a>
+            <span style="margin: 1%;"> · </span>
+            <div style="display: flex; flex-direction: column; height:fit-content">
+                <p style="height: fit-content; margin-block-start: 0em; margin-block-end: 0em;"> <%= langkit["header"]["languages"] %> </p>
+                <a href="ca">Català</a>
+                <a href="es">Español</a>
+                <a href="en">English</a>
+            </div>
+        </div>
+	</div>
+    <!-- ?  END OF HEADER -->
+
+
+    <div style="width: 100vw; height: 60vh; text-align: center; padding-top: 5vh; align-items: center;">
+		<h1><em><%= langkit["sucessmsg"] %></em><br></h1> 
+		<p><%= langkit["delaywarn"] %></p>
+		<p><%- langkit["joinlbd"] %></p>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<!--
+	¿¿Qué haces inspeccionando elemento?? ¡Déjame en paz y ponte a programar!
+
+	(A no ser que hayas encontrado un bug, en ese caso contáctame por Slack porfa <3)
+	- jvacaris
+-->
+
+<html>
+
+<head>
+    <title>AoC 42 - Edit user</title>
+    <link rel="icon" type="image/x-icon" href="/faviconaoc.ico">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <!-- ?  HEADER -->
+	<div class="custom-header">
+        <div class="custom-logo-div" style="height: 200px; overflow-y: unset;">
+            <iframe class="custom-logo-long" src="/42.html" allowTransparency="true" scrolling="no" frameborder="0" style="width:50vw; height: 200px; overflow-y: unset;"></iframe>
+            <iframe class="custom-logo-short" src="/42short.html" allowTransparency="true" scrolling="no" frameborder="0" style="width:66vw; height: 220px; overflow-y: unset;"></iframe>
+        </div>
+        <div style="display: flex; flex-direction: row; align-items: center; width:50vw; margin: auto; text-align: center; justify-content: center;">
+            <a href=<%= langkit["header"]["register_href"] %> style="width:max-content"> [<%= langkit["header"]["register"] %>] </a>
+            <span style="margin: 1%;"> · </span>
+            <a href=<%= langkit["header"]["faqs_href"] %> style="width:max-content"> [<%= langkit["header"]["faqs"] %>] </a>
+            <span style="margin: 1%;"> · </span>
+            <a href=<%= langkit["header"]["ranking_href"] %> style="width:max-content"> [<%= langkit["header"]["ranking"] %>] </a>
+        </div>
+	</div>
+    <!-- ?  END OF HEADER -->
+
+    <div class="user_register_div">
+        <h1><em><%- langkit["welcome"] %><%- info["data"]["name"] %>!</em></h1>
+        <p><%- langkit["instructions"] %></p>
+		
+		<div>
+			<p><em><%- langkit["login"] %>: </em><%- info["data"]["login"] %></p>
+			<p><em><%- langkit["current_aocid"] %>: </em>#<%- current_aocid %></p>
+		</div>
+		
+		<p><%- langkit["your_group"] %>: <em><code><%= current_group %></code></em></p>
+        <form action="/deletion" method="post">
+			<input type="hidden" name="sessionid" value=<%- info["id"] %>>
+			<input type="hidden" name="lang" value=<%- langkit["lang"] %>>
+            <button type="submit"><%= langkit["unlink"] %></button>
+        </form>
+    </div>
+</body>
+
+</html>
